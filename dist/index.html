@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="cha-cha">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
+    <title>Do the Cha Cha</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
+
+    <nav class="navbar">
+      <a href="/" class="logo">
+        <img src="assets/images/logo.png" alt="Do the Cha-Cha logo">
+      </a>
+      <div class="links-container">
+        <a ui-sref="home" class="navbar-link">sign up, in, or out</a>
+        <a ui-sref="rooms" class="navbar-link">your rooms</a>
+      </div>
+    </nav>
+
+    <ui-view></ui-view>
 <body>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDdtsN3BdTarE_jDhTsvWv4P6MAqUgcaYI",
+    authDomain: "cha-cha-7e4cc.firebaseapp.com",
+    databaseURL: "https://cha-cha-7e4cc.firebaseio.com",
+    storageBucket: "cha-cha-7e4cc.appspot.com",
+    messagingSenderId: "946190246527"
+  };
+  firebase.initializeApp(config);
+</script>
+
     <script src="/scripts/app.js"></script>
+
 </body>
 </html>
