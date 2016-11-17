@@ -10,29 +10,37 @@ html {
 }
 
 body {
-    background-color: light-gray;
+    background-color: gray;
     font-family: 'Open Sans';
     color: white;
     min-height: 100%;
     padding-bottom: 200px;
 }
 
-.aside {
-
-
-}
-
 .navbar {
     position: relative;
-    padding: 0.5rem;
-    background-color: rgba(101,18,95,0.5);
+    padding: 1.5rem;
+    background-color: lightblue;
     z-index: 1;
 }
 
 .navbar > .logo {
     position: relative;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: middle;
+    color: white;
+    font-size: 0.925rem;
+    letter-spacing: 0.05rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+
+    /*position: relative;
     left: 2rem;
-    cursor: pointer;  /* produces the finger-pointer icon when you hover over the logo */
+    cursor: pointer;  /* produces the finger-pointer icon when you hover over the logo */*/
 }
 
 .navbar .links-container {
@@ -40,7 +48,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    height: 100px;
+    height: 50px;
     color: white;
     text-decoration: none;
 }
