@@ -117,13 +117,16 @@ body {
 }
 
 /*media queries*/
-/* Medium and small screens (750px) */
-@media (min-width: 750px) {
+/* Medium and small screens (525px) */
+@media (min-width:525px) {
     html {
         font-size: 112%;
     }
 
     .rooms-list {
+      width: 100%;
+    }
+    .hero-content {
       width: 100%;
     }
 
