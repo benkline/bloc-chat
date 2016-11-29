@@ -34,11 +34,15 @@ body {
     vertical-align: middle;
     color: white;
     font-size: 0.925rem;
-    letter-spacing: 0.05rem;
-    font-weight: 800;
     text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.25rem;
+    text-shadow: 1px 1px 0px rgb(58,23,63);
     text-decoration: none;
     cursor: pointer;
+
 
 /* image logo*/
     /*max-width: 300px !important;
@@ -113,12 +117,16 @@ body {
 }
 
 /*media queries*/
-/* Medium and small screens (640px) */
-@media (min-width: 640px) {
+/* Medium and small screens (750px) */
+@media (min-width: 750px) {
     html {
         font-size: 112%;
     }
-    
+
+    .rooms-list {
+      width: 100%;
+    }
+
 /* Large screens (1024px) */
 @media (min-width: 1024px) {
   html {font-size: 120%;}
