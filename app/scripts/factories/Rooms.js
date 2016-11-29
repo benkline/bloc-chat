@@ -1,5 +1,5 @@
 (function() {
-  function Room($firebaseArray) {
+  function Rooms($firebaseArray) {
 
 
     var ref = firebase.database().ref().child("rooms");
@@ -13,5 +13,5 @@
 
   angular
     .module('cha-cha')
-    .factory('Room', ['$firebaseArray', Room]);
+    .factory('Rooms', ['$firebaseArray', Rooms]);
 })();

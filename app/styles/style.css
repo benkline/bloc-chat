@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color: gray;
+    background-color: lightgray;
     font-family: 'Open Sans';
     color: white;
     min-height: 100%;
@@ -25,6 +25,8 @@ body {
 }
 
 .navbar > .logo {
+
+/* text logo*/
     position: relative;
     height: 100%;
     padding-left: 1rem;
@@ -38,9 +40,14 @@ body {
     text-decoration: none;
     cursor: pointer;
 
-    /*position: relative;
-    left: 2rem;
-    cursor: pointer;  /* produces the finger-pointer icon when you hover over the logo */*/
+/* image logo*/
+    /*max-width: 300px !important;
+    height: auto;
+    margin-right : auto;
+    margin-left : auto;
+    /*position: relative;*/
+    /*left: 2rem;
+    cursor: pointer;  /* produces the finger-pointer icon when you hover over the logo */
 }
 
 .navbar .links-container {
@@ -91,12 +98,6 @@ body {
 .clearfix::after {
     clear: both;
 }
-/*media queries*/
-/* Medium and small screens (640px) */
-@media (min-width: 640px) {
-  html {
-    font-size: 112%;
-  }
 
 .column {
     float: left;
@@ -105,13 +106,19 @@ body {
 }
 
   .column.full { width: 100%; }
-  .column.two-thirds { width: 66.7%; }
+  .column.two-thirds { width: 61.8%; }
   .column.half { width: 50%; }
-  .column.third { width: 33.3%; }
-  .column.fourth { width: 25%; }
+  .column.third { width: 38.2%; }
   .column.flow-opposite { float: right; }
 }
 
+/*media queries*/
+/* Medium and small screens (640px) */
+@media (min-width: 640px) {
+    html {
+        font-size: 112%;
+    }
+    
 /* Large screens (1024px) */
 @media (min-width: 1024px) {
   html {font-size: 120%;}

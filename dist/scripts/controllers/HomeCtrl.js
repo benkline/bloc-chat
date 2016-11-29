@@ -1,9 +1,9 @@
 (function() {
-    function HomeCtrl() {
-       this.heroTitle = "Do the Cha-Cha!";
+    function HomeCtrl($scope, Rooms) {
+       this.heroTitle = "share lists and chat!";
     }
 
     angular
         .module('cha-cha')
-        .controller('HomeCtrl', HomeCtrl);
+        .controller('HomeCtrl', ['$scope', 'Rooms', HomeCtrl]);
 })();
