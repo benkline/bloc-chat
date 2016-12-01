@@ -1,10 +1,16 @@
 <section class="rooms-list">
   <div class="rooms-list-title">Your Rooms</div>
-    <div class="rooms-list-items" ng-repeat="room in Rooms.rooms"></div>
+    <!-- <button class="addroom-button" ng-click="rooms.addroom">Add a room</button> -->
+    <ul class="rooms-list-items">
+      <li ng-repeat="n in home.rooms track by $index">
+        {{n}}
+      </li>
+    </ul>
+
 </section>
 <section class="hero-content">
   <div class="hero-title">{{ home.heroTitle }}</div>
 </section>
 <section class="home-content">
-  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ..."</p>
+  {{home.RoomsFactory}}
 </section>

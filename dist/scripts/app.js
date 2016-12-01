@@ -12,7 +12,7 @@
         controller: 'HomeCtrl as home',
         templateUrl: '/templates/home.html'
     });
-}
+  }
 
   angular
       .module('cha-cha', ['ui.router','firebase'])

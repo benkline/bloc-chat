@@ -1,14 +1,23 @@
 (function() {
-    function HomeCtrl($scope, Rooms) {
-       this.heroTitle = "share lists and chat!";
+    function HomeCtrl(RoomsFactory) {
+      this.heroTitle = "Chat!";
+
+      //access firebase array and create something ng-repeat can use
+      var roomList = function(){
+        rooms = []
+        for (room in RoomsFactory) {
+          roomObj = {"Room ": "I am a number"};
+          rooms.push(roomObj);
+          }
+        console.log(room.name);
+        return rooms;
+      }
+
+      this.RoomsFactory = RoomsFactory;
+      this.rooms = roomList();
     }
 
-    // this.rooms = [];
-    // for (var i=0; i < Rooms.rooms.length; i++) {
-    //    this.rooms.push(angular.copy(Rooms.rooms));
-    // }
-
-    angular
+ angular
         .module('cha-cha')
-        .controller('HomeCtrl', ['$scope', 'Rooms', HomeCtrl]);
+        .controller('HomeCtrl', ['RoomsFactory', HomeCtrl]);
 })();
