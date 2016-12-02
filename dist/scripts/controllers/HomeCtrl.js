@@ -1,23 +1,19 @@
 (function() {
-    function HomeCtrl(RoomsFactory) {
-      this.heroTitle = "Chat!";
+    function HomeCtrl ($scope, $firebaseArray) {
+        this.heroTitle = "chat!";
 
-      //access firebase array and create something ng-repeat can use
-      var roomList = function(){
-        rooms = []
-        for (room in RoomsFactory) {
-          roomObj = {"Room ": "I am a number"};
-          rooms.push(roomObj);
-          }
-        console.log(room.name);
-        return rooms;
-      }
-
-      this.RoomsFactory = RoomsFactory;
-      this.rooms = roomList();
+  var ref = firebase.database().ref().child("rooms");
+  // create a synchronized array
+  $scope.rooms = $firebaseArray(ref);
+  // add new items to the array
+  // the room is automatically added to our Firebase database!
+  $scope.addRoom = function() {
+    $scope.rooms.$add({
+      text: $scope.newRoomText
+    });
+  };
     }
-
  angular
         .module('cha-cha')
-        .controller('HomeCtrl', ['RoomsFactory', HomeCtrl]);
+        .controller('HomeCtrl', ['$scope', '$firebaseArray', HomeCtrl]);
 })();

@@ -1,16 +1,21 @@
 <section class="rooms-list">
   <div class="rooms-list-title">Your Rooms</div>
-    <!-- <button class="addroom-button" ng-click="rooms.addroom">Add a room</button> -->
-    <ul class="rooms-list-items">
-      <li ng-repeat="n in home.rooms track by $index">
-        {{n}}
+   <ul>
+      <li ng-repeat="room in rooms">
+        <!-- edit a room -->
+        <input ng-model="room.text" ng-change="rooms.$save(room)" />
+        <!-- delete a room -->
+        <button ng-click="rooms.$remove(room)">Delete room</button>
       </li>
     </ul>
-
+    <!-- push a new room onto the array -->
+    <form ng-submit="addRoom()">
+      <input ng-model="newRoomText" />
+      <button type="submit">Add Room</button>
+    </form>
 </section>
 <section class="hero-content">
   <div class="hero-title">{{ home.heroTitle }}</div>
 </section>
 <section class="home-content">
-  {{home.RoomsFactory}}
 </section>
