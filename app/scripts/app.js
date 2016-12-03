@@ -15,6 +15,6 @@
   }
 
   angular
-      .module('cha-cha', ['ui.router','firebase'])
+      .module('cha-cha', ['ui.router','firebase','ui.bootstrap'])
       .config(config);
 })();
