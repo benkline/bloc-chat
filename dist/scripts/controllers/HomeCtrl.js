@@ -1,19 +1,19 @@
 (function() {
-    function HomeCtrl ($scope, $firebaseArray) {
+    function HomeCtrl (Room, $modal) {
+
         this.heroTitle = "chat!";
 
-        var ref = firebase.database().ref().child("rooms");
-        // create a synchronized array
-        $scope.rooms = $firebaseArray(ref);
-        // add new items to the array
-        // the room is automatically added to our Firebase database!
-        $scope.addRoom = function() {
-          $scope.rooms.$add({
-            text: $scope.newRoomText
-            });
+        this.rooms = Room.all;
+
+        this.createRoomModal = function() {
+          $modal.open({
+            templateUrl: 'templates/createRoomModal.html',
+            controller: 'RoomCtrl',
+            size: 'sm'
+          });
         };
-      }
+      };
  angular
         .module('cha-cha')
-        .controller('HomeCtrl', ['$scope','$firebaseArray', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$modal', HomeCtrl]);
 })();

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="cha-cha">
-    <head>
+<html ng-app="cha-cha">
+    <head lang="en">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Do the Cha Cha</title>
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//angular-ui.github.io/bootstrap/ui-bootstrap-1.3.2-csp.css">
         <link rel="stylesheet" href="/styles/style.css">
         <link rel="stylesheet" href="/styles/home.css">
     </head>
@@ -19,27 +20,26 @@
 
         <ui-view></ui-view>
 
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
         <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-messaging.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap.min.js"></script>
-        <script>
-          var config = {
-            apiKey: "AIzaSyDdtsN3BdTarE_jDhTsvWv4P6MAqUgcaYI",
-            authDomain: "cha-cha-7e4cc.firebaseapp.com",
-            databaseURL: "https://cha-cha-7e4cc.firebaseio.com",
-            storageBucket: "cha-cha-7e4cc.appspot.com",
-            messagingSenderId: "946190246527"
-          };
-          firebase.initializeApp(config);
-        </script>
+        <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+
         <script src="/scripts/app.js"></script>
         <script src="/scripts/controllers/HomeCtrl.js"></script>
+        <script src="/scripts/controllers/RoomCtrl.js"></script>
+        <script src="/scripts/services/Room.js"></script>
+
+        <script>
+        var config = {
+          apiKey: "AIzaSyDdtsN3BdTarE_jDhTsvWv4P6MAqUgcaYI",
+          authDomain: "cha-cha-7e4cc.firebaseapp.com",
+          databaseURL: "https://cha-cha-7e4cc.firebaseio.com",
+          storageBucket: "cha-cha-7e4cc.appspot.com",
+          messagingSenderId: "946190246527"
+        };
+        firebase.initializeApp(config);
+        </script>
     </body>
 </html>
