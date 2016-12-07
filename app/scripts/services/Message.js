@@ -1,20 +1,21 @@
 (function() {
   function Message($firebaseArray) {
 
-  Message = {};
+    Message = {}
 
-  var ref = firebase.database().ref().child("messages")
+    Message.getByRoomId = function(room){
+      console.log(room);
+      var ref = firebase.database().ref().child('messages').orderByChild("roomId").equalTo(room)
+      var messages = $firebaseArray(ref);
+      return messages;
+      // this.username = ['sorry'];
+      // this.content = ['there are no messages in this room yet'];
+    };
 
-  var messages = $firebaseArray(ref);
 
-  Message.getByRoomId = function(room){
-    arry.push(messages);
-    arry = [];
-    return arry;
+    return Message;
   };
 
-  return Message;
-};
 angular
   .module('cha-cha')
   .factory('Message', ['$firebaseArray', Message]);

@@ -2,8 +2,10 @@
     function HomeCtrl (Room, $modal, Message) {
 
         this.rooms = Room.all;
-        this.messages = Message.all;
-        this.activeRoomTitle = 'chat!'
+        this.messages = Message.all
+        this.activeRoomTitle = 'chat!';
+
+        
 
         this.createRoomModal = function() {
           $modal.open({
@@ -15,7 +17,7 @@
 
         this.clickActiveRoom = function(room) {
           this.activeRoomTitle = room.name;
-          Message.getByRoomId(room.$id);
+          this.messages = Message.getByRoomId(room.$id);
         };
       };
  angular
