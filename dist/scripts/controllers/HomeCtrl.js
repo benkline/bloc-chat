@@ -1,9 +1,11 @@
 (function() {
-    function HomeCtrl (Room, $modal) {
-
-        this.heroTitle = "chat!";
+    function HomeCtrl (Room, $modal, Message) {
 
         this.rooms = Room.all;
+        this.messages = Message.all
+        this.activeRoomTitle = 'chat!';
+
+        
 
         this.createRoomModal = function() {
           $modal.open({
@@ -12,8 +14,13 @@
             size: 'sm'
           });
         };
+
+        this.clickActiveRoom = function(room) {
+          this.activeRoomTitle = room.name;
+          this.messages = Message.getByRoomId(room.$id);
+        };
       };
  angular
         .module('cha-cha')
-        .controller('HomeCtrl', ['Room', '$modal', HomeCtrl]);
+        .controller('HomeCtrl', ['Room','$modal','Message', HomeCtrl]);
 })();

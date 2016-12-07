@@ -1,16 +1,21 @@
-<section class="rooms-list">
-  <div class="rooms-list-title">Chat Rooms</div>
-   <ul>
-      <li ng-repeat="room in home.rooms track by $index">{{room.name}}</li>
-  </ul>
-  <div class="btn btn-primary btn-create-room" ng-click="home.createRoomModal()">
-    New Room
-  </div>
-
-
-</section>
-<section class="hero-content">
-  <div class="hero-title">{{ home.heroTitle }}</div>
-</section>
-<section class="home-content">
-</section>
+  <section class="rooms-container">
+    <div class="rooms-title">Chat Rooms</div>
+     <ul class="rooms-list">
+        <li ng-repeat="room in home.rooms" ng-click="home.clickActiveRoom(room)">
+          {{room.name}}
+        </li>
+    </ul>
+    <div class="btn btn-primary" ng-click="home.createRoomModal()">
+      New Room
+    </div>
+  </section>
+  <section class="messages-container">
+    <div class="messages-activeRoom">
+      {{home.activeRoomTitle}}
+    </div>
+    <ul class="messages-list">
+      <li ng-repeat="message in home.messages track by $index">
+        <span style="color:red;">{{message.username}}</span>:&nbsp<span style="color:blue;">"{{message.content}}"</span>
+      </li>
+    </ul>
+  </section>
