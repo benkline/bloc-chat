@@ -1,0 +1,52 @@
+{
+  "rooms" : {
+    "-KY-y8KJqjfTQM87knUu" : {
+      "name" : "Room 1"
+    },
+    "-KY-yC4skMTYgNqXuR-V" : {
+      "name" : "Room 2"
+    },
+    "-KY0WaOVB3Z9563-u4Ps" : {
+      "name" : "Room 3"
+    },
+    "-KYFHo0WO7Q1tiEJ8oMR" : {
+      "name" : "A Fourth Room"
+    }
+   },
+   "users" : {
+     "-KYFHo0WO7Q1tiEJ8oM1" : {
+       "username" : "Costello",
+       "email"    : "a@email.com"
+     },
+     "-KYFHo0WO7Q1tiEJ8oM2" : {
+       "username" : "Abbot",
+       "email"    : "b@email.com"
+      }
+    },
+    "messages" : {
+      "-KY-y8KJqjfTQM87knU1" : {
+        "username"  : "Costello",
+        "content"   : "Who's on first?",
+        "sentAt"    : "",
+        "roomId"    : "-KY-y8KJqjfTQM87knUu"
+      },
+      "-KY-y8KJqjfTQM87knU2" : {
+        "username"  : "Abbot",
+        "content"   : "Yes.",
+        "sentAt"    : "",
+        "roomId"    : "-KY-y8KJqjfTQM87knUu"
+      },
+      "-KY-y8KJqjfTQM87knU3" : {
+        "username"  : "Costello",
+        "content"   : "I mean the fellow's name.",
+        "sentAt"    : "",
+        "roomId"    : "-KY-y8KJqjfTQM87knUu"
+      },
+      "-KY-y8KJqjfTQM87knU4" : {
+        "username"  : "Abbot",
+        "content"   : "Who.",
+        "sentAt"    : "",
+        "roomId"    : "-KY-y8KJqjfTQM87knUu"
+      }
+  }
+}
