@@ -15,6 +15,6 @@
   }
 
   angular
-      .module('cha-cha', ['ui.router','firebase','ui.bootstrap'])
+      .module('cha-cha', ['ui.router','firebase','ui.bootstrap','ngCookies'])
       .config(config);
 })();

@@ -1,5 +1,5 @@
 (function() {
-    function RoomCtrl ($scope, $modalInstance, Room) {
+    function RoomCtrl ($scope, $uibModalInstance, Room) {
 
     $scope.newRoom = {};
 
@@ -11,7 +11,7 @@
 
         Room.create(newRoom).then(function(){
           $scope.newRoom.name = '';
-          $modalInstance.close();
+          $uibModalInstance.close();
         });
 
       } else {
@@ -20,11 +20,11 @@
     };
 
     $scope.cancel = function(){
-      $modalInstance.close('cancel');
+      $uibModalInstance.close('cancel');
     };
 
 }
 angular
         .module('cha-cha')
-        .controller('RoomCtrl', ['$scope', '$modalInstance', 'Room', RoomCtrl]);
+        .controller('RoomCtrl', ['$scope', '$uibModalInstance', 'Room', RoomCtrl]);
 })();
