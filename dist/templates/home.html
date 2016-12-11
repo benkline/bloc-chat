@@ -18,4 +18,8 @@
         <span style="color:red;">{{message.username}}</span>:&nbsp<span style="color:blue;">"{{message.content}}"</span>
       </li>
     </ul>
+    <div class="message-input">
+      <input type="text" required="true" class="form-control" placeholder="Send a message" ng-model="newMessage" >
+      <button class="btn btn-primary" ng-click="home.sendNewMessage(newMessage)">Send</button>
+    </div>
   </section>

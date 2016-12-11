@@ -1,20 +1,20 @@
 (function() {
   function Message($firebaseArray) {
 
-    Message = {}
+    var ref = firebase.database().ref().child('messages');
+    var allMessages = $firebaseArray(ref);
+    
+    return {
+        getByRoomId: function(room){
+          var messages = allMessages.orderByChild("roomId").equalTo(room)
+          return messages;
+        },
 
-    Message.getByRoomId = function(room){
-      console.log(room);
-      var ref = firebase.database().ref().child('messages').orderByChild("roomId").equalTo(room)
-      var messages = $firebaseArray(ref);
-      return messages;
-      // this.username = ['sorry'];
-      // this.content = ['there are no messages in this room yet'];
-    };
-
-
-    return Message;
-  };
+        send: function(messageObj){
+          return messages.$add(messageObj);
+        }
+    }
+}
 
 angular
   .module('cha-cha')

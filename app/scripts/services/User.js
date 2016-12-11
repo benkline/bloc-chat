@@ -1,12 +1,12 @@
 (function() {
-  function CheckUserCookie($cookies, $uibModal) {
+  function User($cookies, $uibModal) {
 
     var currentUser = $cookies.get('name');
 
     if (!currentUser || currentUser === '') {
       $uibModal.open({
         templateUrl: 'templates/createUserModal.html',
-        controller: 'UserCookieCtrl',
+        controller: 'UserCtrl',
         keyboard: false,
         backdrop: 'static',
         size: 'sm'
@@ -16,5 +16,5 @@
   }
   angular
     .module('cha-cha')
-    .run(['$cookies', '$uibModal', CheckUserCookie]);
+    .run(['$cookies', '$uibModal', User]);
 })();
