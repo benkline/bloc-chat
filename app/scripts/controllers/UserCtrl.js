@@ -1,5 +1,5 @@
 (function() {
-    function UserCookieCtrl ($scope, $cookies, $uibModalInstance) {
+    function UserCtrl ($scope, $cookies, $uibModalInstance) {
         $scope.createNewUser = function(){
             $cookies.put("name", $scope.newUserName);
             if ($cookies.get('name') && $cookies.get('name') !== ''){
@@ -12,5 +12,5 @@
     };
 angular
     .module('cha-cha')
-    .controller('UserCookieCtrl', ['$scope', '$cookies', '$uibModalInstance', UserCookieCtrl]);
+    .controller('UserCtrl', ['$scope', '$cookies', '$uibModalInstance', UserCtrl]);
 })();

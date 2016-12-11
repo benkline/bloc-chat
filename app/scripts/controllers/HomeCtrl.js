@@ -1,9 +1,10 @@
 (function() {
-    function HomeCtrl (Room, $uibModal, Message) {
+    function HomeCtrl ($cookies, $uibModal, Room, Message ) {
 
         this.rooms = Room.all;
         this.messages = Message.all;
         this.activeRoom = null;
+        this.user = $cookies.get('name')
 
         this.createRoomModal = function() {
           $uibModal.open({
@@ -13,6 +14,16 @@
           });
         };
 
+        this.sendNewMessage = function(newMessage) {
+          messageObj = {
+              "username"  : this.user,
+              "content"   : newMessage,
+              "sentAt"    : Date(),
+              "roomId"    : this.activeRoom.$id
+          }
+          Message.send(messageObj);
+        };
+
         this.clickActiveRoom = function(room) {
           this.activeRoom = room;
           this.messages = Message.getByRoomId(room.$id);
@@ -20,5 +31,5 @@
       };
  angular
         .module('cha-cha')
-        .controller('HomeCtrl', ['Room','$uibModal','Message', HomeCtrl]);
+        .controller('HomeCtrl', ['$cookies', '$uibModal','Room', 'Message', HomeCtrl]);
 })();
