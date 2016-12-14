@@ -17,11 +17,10 @@
         this.sendNewMessage = function(newMessage) {
           messageObj = {
               "username"  : this.user,
-              "content"   : this.newMessage,
+              "content"   : newMessage,
               "sentAt"    : Date(),
               "roomId"    : this.activeRoom.$id
           }
-          console.log(messageObj);
           Message.send(messageObj);
         };
 

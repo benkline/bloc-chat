@@ -1,0 +1,63 @@
+
+.rooms-container {
+    top: 0;
+    float: left;
+    padding: .5rem;
+    min-height: 300px;
+    width: 15rem;
+    margin: .5rem;
+    margin-right: 2.5rem;
+    background-color: gray;
+}
+
+.rooms-title{
+    padding-left:1rem;
+    padding-top:.5rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    text-shadow: 1px 1px 0px rgb(58,23,63);
+}
+
+.rooms-list{
+    color: white;
+    font-size: 1rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+  }
+
+.messages-container {
+    max-width: 56rem;
+    display: inline-block;
+}
+
+.messages-activeRoom {
+    padding-bottom: 2rem;
+    display: inline-block;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    text-shadow: 1px 1px 0px rgb(58,23,63);
+}
+
+.messages-list {
+
+}
+
+@media (min-width:525px) {
+    .rooms-list {
+      width: 100%;
+    }
+    .hero-content {
+      width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+}
