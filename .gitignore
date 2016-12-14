@@ -1,9 +1,5 @@
-dist/
 node_modules/
 bower_components/
 .idea/
 .sass-cache/
 .DS_Storedist/
-data.json
-roomsdata.json
-cha-cha-7e4cc-export.json seed-data.json
