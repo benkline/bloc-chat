@@ -9,10 +9,10 @@
             },
 
             send: function(messageObj){
+                console.log(messageObj);
                 var database = firebase.database().ref().child('messages')
                 var newMessageRef = database.push();
                 return newMessageRef.set(messageObj);
-                console.log(messageObj);
 
             }
         }
